@@ -15,7 +15,7 @@ export default function Home({ data }) {
   )
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/flights`)
   const data = await res.json()
 
