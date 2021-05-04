@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/itinerary/[id]": "pages/itinerary/[id].js",
   "/api/flights": "pages/api/flights.js",
   "/": "pages/index.js"
 }

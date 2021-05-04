@@ -1,4 +1,4 @@
-import * as flights from '../../../flights.json'
+import flights from '../../../flights.json'
 
 // get all flight itineraries
 export default function handler(req, res) {

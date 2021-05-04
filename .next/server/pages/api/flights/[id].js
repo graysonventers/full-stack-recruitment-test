@@ -1,21 +1,10 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (function() {
 var exports = {};
-exports.id = "pages/api/flights/[id]";
-exports.ids = ["pages/api/flights/[id]"];
+exports.id = 701;
+exports.ids = [701];
 exports.modules = {
 
-/***/ "./flights.json":
-/*!**********************!*\
-  !*** ./flights.json ***!
-  \**********************/
+/***/ 4598:
 /***/ (function(module) {
 
 "use strict";
@@ -23,14 +12,28 @@ module.exports = JSON.parse('{"itineraries":[{"id":"it_1","legs":["leg_1","leg_4
 
 /***/ }),
 
-/***/ "./pages/api/flights/[id].js":
-/*!***********************************!*\
-  !*** ./pages/api/flights/[id].js ***!
-  \***********************************/
+/***/ 1524:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ handler; }\n/* harmony export */ });\n/* harmony import */ var _flights_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../flights.json */ \"./flights.json\");\n // get single flight itinerary\n\nfunction handler(req, res) {\n  const filteredFlights = _flights_json__WEBPACK_IMPORTED_MODULE_0__.itineraries.filter(flight => flight.id === req.query.id);\n\n  if (filteredFlights.length > 0) {\n    res.status(200).json(filteredFlights[0]);\n  } else {\n    res.status(404).json({\n      message: `Itinerary with id of ${req.query.id} not found`\n    });\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9mdWxsLXN0YWNrLXJlY3J1aXRtZW50LXRlc3QvLi9wYWdlcy9hcGkvZmxpZ2h0cy9baWRdLmpzPzBhZGIiXSwibmFtZXMiOlsiaGFuZGxlciIsInJlcSIsInJlcyIsImZpbHRlcmVkRmxpZ2h0cyIsImZsaWdodHMiLCJmbGlnaHQiLCJpZCIsInF1ZXJ5IiwibGVuZ3RoIiwic3RhdHVzIiwianNvbiIsIm1lc3NhZ2UiXSwibWFwcGluZ3MiOiI7Ozs7O0NBRUE7O0FBQ2UsU0FBU0EsT0FBVCxDQUFpQkMsR0FBakIsRUFBc0JDLEdBQXRCLEVBQTJCO0FBRXRDLFFBQU1DLGVBQWUsR0FBR0MsNkRBQUEsQ0FBMkJDLE1BQU0sSUFBSUEsTUFBTSxDQUFDQyxFQUFQLEtBQWNMLEdBQUcsQ0FBQ00sS0FBSixDQUFVRCxFQUE3RCxDQUF4Qjs7QUFFQSxNQUFJSCxlQUFlLENBQUNLLE1BQWhCLEdBQXlCLENBQTdCLEVBQWdDO0FBQzVCTixPQUFHLENBQUNPLE1BQUosQ0FBVyxHQUFYLEVBQWdCQyxJQUFoQixDQUFxQlAsZUFBZSxDQUFDLENBQUQsQ0FBcEM7QUFDSCxHQUZELE1BRU87QUFDSEQsT0FBRyxDQUFDTyxNQUFKLENBQVcsR0FBWCxFQUFnQkMsSUFBaEIsQ0FBcUI7QUFBRUMsYUFBTyxFQUFHLHdCQUF1QlYsR0FBRyxDQUFDTSxLQUFKLENBQVVELEVBQUc7QUFBaEQsS0FBckI7QUFDSDtBQUNKIiwiZmlsZSI6Ii4vcGFnZXMvYXBpL2ZsaWdodHMvW2lkXS5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIGZsaWdodHMgZnJvbSAnLi4vLi4vLi4vZmxpZ2h0cy5qc29uJ1xuXG4vLyBnZXQgc2luZ2xlIGZsaWdodCBpdGluZXJhcnlcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGhhbmRsZXIocmVxLCByZXMpIHtcbiAgICBcbiAgICBjb25zdCBmaWx0ZXJlZEZsaWdodHMgPSBmbGlnaHRzLml0aW5lcmFyaWVzLmZpbHRlcihmbGlnaHQgPT4gZmxpZ2h0LmlkID09PSByZXEucXVlcnkuaWQpXG5cbiAgICBpZiAoZmlsdGVyZWRGbGlnaHRzLmxlbmd0aCA+IDApIHtcbiAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24oZmlsdGVyZWRGbGlnaHRzWzBdKVxuICAgIH0gZWxzZSB7XG4gICAgICAgIHJlcy5zdGF0dXMoNDA0KS5qc29uKHsgbWVzc2FnZTogYEl0aW5lcmFyeSB3aXRoIGlkIG9mICR7cmVxLnF1ZXJ5LmlkfSBub3QgZm91bmRgIH0pXG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/api/flights/[id].js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ handler; }
+/* harmony export */ });
+/* harmony import */ var _flights_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4598);
+ // get single flight itinerary
+
+function handler(req, res) {
+  const filteredFlights = _flights_json__WEBPACK_IMPORTED_MODULE_0__.itineraries.filter(flight => flight.id === req.query.id);
+
+  if (filteredFlights.length > 0) {
+    res.status(200).json(filteredFlights[0]);
+  } else {
+    res.status(404).json({
+      message: `Itinerary with id of ${req.query.id} not found`
+    });
+  }
+}
 
 /***/ })
 
@@ -41,7 +44,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__("./pages/api/flights/[id].js"));
+var __webpack_exports__ = (__webpack_exec__(1524));
 module.exports = __webpack_exports__;
 
 })();
