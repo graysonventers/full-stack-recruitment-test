@@ -1,0 +1,45 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 10px 15px 10px;
+    padding: 10px;
+    color:#111236;
+    background-color: #ffffff;
+    text-decoration:none;
+    box-shadow:0px 1px 3px 0px rgba(37,32,31,0.3);
+    border-radius:.4rem;
+    width: 98%;
+}
+
+.button {
+    align-self: flex-end;
+    background-color: #00a698;
+    border: none;
+    border-radius: 4px;
+    width: 110px;
+    height: 35px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.price {
+    font-size: 30px;
+}
+
+.airline {
+    font-size: 15px;
+    font-weight: 400;
+    color: #b2b2bf;;
+}
+
+.bottomRowInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priceAndName {
+    display: flex;
+    flex-direction: column;
+}

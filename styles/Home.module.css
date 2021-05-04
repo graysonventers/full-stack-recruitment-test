@@ -1,0 +1,15 @@
+.container {
+  margin-top: 2vh;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  width: 155px;
+  margin: 0 0 3px 11px;
+}
+
+

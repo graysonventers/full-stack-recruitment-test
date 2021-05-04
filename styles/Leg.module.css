@@ -1,0 +1,46 @@
+.legRow {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.legBox:nth-child(4) {
+    margin-right: 130px;
+}
+
+.legBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.logoImg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.duration {
+    font-size: 12px;
+    color: #8f90a0;
+    margin-bottom: 10px;
+}
+
+.stopsGreen {
+    font-size: 12px;
+    color: #00a698;
+}
+
+.stopsRed {
+    font-size: 12px;
+    color: #d1435b;
+}
+
+.airport {
+    color: #8f90a0;
+    margin-top: 5px;
+}
+
+.arrowIcon {
+    width: 13px;
+    margin: 15px 15px;
+}
