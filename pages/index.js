@@ -17,7 +17,7 @@ export default function Home({ flightData }) {
   )
 }
 
-export async function getServerSideProps () {
+export async function getServerSideProps (context) {
   try {
 
     const res = await fetch(`${server}/api/flights`)
