@@ -1,8 +1,10 @@
 import style from '../styles/FlightsContainer.module.css'
 import Itineraries from './Itineraries'
 
-const FlightsContainer = ({ flights: {itineraries, legs} }) => {
-   
+const FlightsContainer = ({ flights }) => {
+
+    const { itineraries, legs } = flights;
+
     return (
         <div className={style.cardContainer}>
             {itineraries.map(itinerary => (
