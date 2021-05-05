@@ -2,7 +2,10 @@ import styles from '../styles/Home.module.css'
 import FlightsContainer from '../components/FlightsContainer'
 import Meta from '../components/Meta'
 import { server } from '../config'
-import fetch from 'node-fetch'
+
+// import data
+import flights from '../flights.json'
+
 
 export default function Home({ flightData }) {
   const {itineraries, legs} = flightData;
@@ -17,24 +20,38 @@ export default function Home({ flightData }) {
   )
 }
 
-export async function getServerSideProps (context) {
+export async function getStaticProps(context) {
   try {
+    const res = flights;
 
-    const res = await fetch(`${server}/api/flights`)
-    const flightData = await res.json();
-
-    console.log(flightData)
-    return {
-      props: { 
-        flightData
-      }
-  }
-  } catch (err) {
-    console.error(err);
     return {
       props: {
-        flightData: {}
+        flightData: flights
       }
     }
+  } catch (err) {
+      console.error(err)
   }
 }
+
+  // Unable to resolve issues with fetching from local API
+
+// export async function getStaticProps (context) {
+//   try {
+
+//     const res = await fetch(`${server}/api/flights`)
+//     const flightData = await res.json();
+
+//     console.log(flightData)
+//     return {
+//       props: { 
+//         flightData: flightData
+//       }
+//   }
+//   } catch (err) {
+//     console.error(err);
+//     return {
+//       props: {}
+//     }
+//   }
+// }

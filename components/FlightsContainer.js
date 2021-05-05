@@ -4,7 +4,6 @@ import Itineraries from './Itineraries'
 const FlightsContainer = ({ itineraries, legs }) => {
 
     // const { itineraries, legs } = flights;
-    console.log(itineraries, legs)
 
     return (
         <div className={style.cardContainer}>
