@@ -42,7 +42,6 @@ export async function getStaticProps(context) {
 //     const res = await fetch(`${server}/api/flights`)
 //     const flightData = await res.json();
 
-//     console.log(flightData)
 //     return {
 //       props: { 
 //         flightData: flightData

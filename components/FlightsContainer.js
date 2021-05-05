@@ -3,8 +3,6 @@ import Itineraries from './Itineraries'
 
 const FlightsContainer = ({ itineraries, legs }) => {
 
-    // const { itineraries, legs } = flights;
-
     return (
         <div className={style.cardContainer}>
             {itineraries.map(itinerary => (

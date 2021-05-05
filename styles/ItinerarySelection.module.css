@@ -1,5 +1,6 @@
 .container {
-    height: 100vh;
+    height: 110vh;
+    width: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,6 +16,6 @@
     height: 35px;
     color: #ffffff;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 100%;
     cursor: pointer;
 }
