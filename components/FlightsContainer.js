@@ -1,9 +1,10 @@
 import style from '../styles/FlightsContainer.module.css'
 import Itineraries from './Itineraries'
 
-const FlightsContainer = ({ flights }) => {
+const FlightsContainer = ({ itineraries, legs }) => {
 
-    const { itineraries, legs } = flights;
+    // const { itineraries, legs } = flights;
+    console.log(itineraries, legs)
 
     return (
         <div className={style.cardContainer}>

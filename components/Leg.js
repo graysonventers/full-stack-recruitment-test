@@ -3,6 +3,8 @@ import style from '../styles/Leg.module.css'
 const Leg = ({ leg }) => {
     const {departure_airport, arrival_airport, departure_time, arrival_time, duration_mins, airline_id, airline_name, stops} = leg[0];
 
+    console.log(leg[0])
+
     // convert date and time to hours and minutes only
     const timeConversion = (time) => time.slice(time.indexOf('T') + 1)
     
