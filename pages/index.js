@@ -3,13 +3,13 @@ import FlightsContainer from '../components/FlightsContainer'
 import Meta from '../components/Meta'
 import { server } from '../config'
 
-// import data
+// import data for hard coding
 // import flights from '../flights.json'
 
 
-export default function Home({ flights }) {
-  console.log(flights)
-  const {itineraries, legs} = flights;
+export default function Home({ flightData }) {
+  console.log(flightData)
+  const {itineraries, legs} = flightData;
 
   return (
 
@@ -20,6 +20,8 @@ export default function Home({ flights }) {
     </div>
   )
 }
+
+// Hard Coded Data
 
 // export async function getStaticProps(context) {
 //   try {
@@ -35,8 +37,6 @@ export default function Home({ flights }) {
 //   }
 // }
 
-  // Unable to resolve issues with fetching from local API
-
 export async function getServerSideProps () {
   try {
 
@@ -45,7 +45,7 @@ export async function getServerSideProps () {
 
     return {
       props: { 
-        flights: flightData,
+        flightData
       }
   }
   } catch (err) {
