@@ -2836,7 +2836,7 @@ const FlightsContainer = ({
 var Meta = __webpack_require__(1596);
 ;// CONCATENATED MODULE: ./config/index.js
 const dev = false;
-const server = dev ? 'http://localhost:3000' : 'graysonskyscannerapp.netlify.app';
+const server = dev ? 'http://localhost:3000' : 'https://graysonskyscannerapp.netlify.app/';
 ;// CONCATENATED MODULE: ./pages/index.js
 
 
@@ -2847,12 +2847,13 @@ const server = dev ? 'http://localhost:3000' : 'graysonskyscannerapp.netlify.app
 // import flights from '../flights.json'
 
 function Home({
-  flightData
+  flights
 }) {
+  console.log(flights);
   const {
     itineraries,
     legs
-  } = flightData;
+  } = flights;
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
     className: (Home_module_default()).container,
     children: [/*#__PURE__*/jsx_runtime_.jsx(Meta/* default */.Z, {
@@ -2887,7 +2888,7 @@ async function getServerSideProps() {
     const flightData = await res.json();
     return {
       props: {
-        flightData
+        flights: flightData
       }
     };
   } catch (err) {

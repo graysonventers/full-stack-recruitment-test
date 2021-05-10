@@ -7,8 +7,9 @@ import { server } from '../config'
 // import flights from '../flights.json'
 
 
-export default function Home({ flightData }) {
-  const {itineraries, legs} = flightData;
+export default function Home({ flights }) {
+  console.log(flights)
+  const {itineraries, legs} = flights;
 
   return (
 
@@ -44,7 +45,7 @@ export async function getServerSideProps () {
 
     return {
       props: { 
-        flightData,
+        flights: flightData,
       }
   }
   } catch (err) {
