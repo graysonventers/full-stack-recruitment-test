@@ -1,7 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/api/flights/[id]": "pages/api/flights/[id].js",
+  "/api/flights": "pages/api/flights.js",
+  "/": "pages/index.js",
+  "/itinerary/[id]": "pages/itinerary/[id].html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/itinerary/[id]": "pages/itinerary/[id].js"
+  "/404": "pages/404.html"
 }

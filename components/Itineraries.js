@@ -17,7 +17,9 @@ const Itineraries = ({ itinerary, legs }) => {
                     <span className={style.price}>{itinerary.price}</span>
                     <span className={style.airline}>{itinerary.agent}</span>
                 </div>
-                <button className={style.button}><Link href="/itinerary/[id]" as={`/itinerary/${itinerary.id}`}>Select</Link></button>
+                <Link href="/itinerary/[id]" as={`/itinerary/${itinerary.id}`}>
+                    <button className={style.button}>Select</button>
+                </Link>
             </div>
         </div>
     )

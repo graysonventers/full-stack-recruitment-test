@@ -4,7 +4,7 @@ import Meta from '../components/Meta'
 import { server } from '../config'
 
 // import data
-import flights from '../flights.json'
+// import flights from '../flights.json'
 
 
 export default function Home({ flightData }) {
@@ -20,37 +20,37 @@ export default function Home({ flightData }) {
   )
 }
 
-export async function getStaticProps(context) {
-  try {
-    const res = flights;
+// export async function getStaticProps(context) {
+//   try {
+//     const res = flights;
 
-    return {
-      props: {
-        flightData: flights
-      }
-    }
-  } catch (err) {
-      console.error(err)
-  }
-}
+//     return {
+//       props: {
+//         flightData: flights
+//       }
+//     }
+//   } catch (err) {
+//       console.error(err)
+//   }
+// }
 
   // Unable to resolve issues with fetching from local API
 
-// export async function getStaticProps (context) {
-//   try {
+export async function getServerSideProps () {
+  try {
 
-//     const res = await fetch(`${server}/api/flights`)
-//     const flightData = await res.json();
+    const res = await fetch(`${server}/api/flights`)
+    const flightData = await res.json();
 
-//     return {
-//       props: { 
-//         flightData: flightData
-//       }
-//   }
-//   } catch (err) {
-//     console.error(err);
-//     return {
-//       props: {}
-//     }
-//   }
-// }
+    return {
+      props: { 
+        flightData,
+      }
+  }
+  } catch (err) {
+    console.error(err);
+    return {
+      props: {}
+    }
+  }
+}
